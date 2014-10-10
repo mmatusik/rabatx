@@ -1,0 +1,44 @@
+<div class="width">
+<div class="offer-podglad">
+        <h2><?php echo $this->name ;?></h2>
+        <div class="flexslider offer-slider">
+  <ul class="slides">
+       <?php foreach ($photos as $img) : ?>    
+            <li data-thumb="<?php echo '../../../../panel-rabatem/data/upload/m_'.$img->src.''; ?>">
+              <img src="<?php echo '../../../../panel-rabatem/data/upload/'.$img->src.''; ?>" />
+            </li>
+        <?php endforeach; ?>    
+  </ul>
+        </div>
+        
+        
+        <div class="offer-details">
+            <?php echo $this->new_price ;?>zł
+        
+        </div>
+  
+    </div>
+</div>
+
+
+
+<b>Podgląd oferty</b></br></br>
+<b>Nazwa</b>: <?php echo $this->name ;?></br>
+<b>Cena</b>: <?php echo $this->new_price ;?>zł</br>
+<b>Stara Cena</b>: <?php echo $this->old_price ;?>zł</br>
+<b>Rabat</b>: -<?php echo $this->percent ;?>%</br></br>
+<b>Opis</b></br><?php echo $this->disc ;?></br></br>
+<b>Dlaczego Warto</b></br><?php echo $this->worth ;?></br></br>
+<b>Jak Skorzystać</b></br><?php echo $this->how ;?></br>
+
+</br></br>
+<b>Zdjęcia</b></br>
+    <?php foreach ($photos as $img) : ?>       
+        <?php echo '../../../../panel-rabatem/data/upload/'.$img->src.''; ?>
+    
+    <?php endforeach; ?>
+</br></br>
+
+
+
+<a href="../">Powrót</a>

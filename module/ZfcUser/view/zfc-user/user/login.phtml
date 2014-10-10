@@ -1,0 +1,27 @@
+
+<div id="content">
+
+<form action="#" method="POST" id="login-form">
+		
+			<fieldset>
+                                
+				<p>
+				<?php
+                                $form = $this->loginForm;
+                                $form->prepare();
+                                echo $this->message;
+                                echo $this->form()->openTag($form);
+                                echo $this->formCollection($form);
+                                echo $this->form()->closeTag();
+                                ?>
+                                </p>
+				
+				<p><a href="#"><?php echo $this->translate('Przypomnij hasło'); ?></a>.</p>
+				
+				
+                        </fieldset>
+
+		</form>
+
+</div>
+

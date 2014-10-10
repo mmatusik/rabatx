@@ -1,0 +1,15 @@
+<?php
+return array(
+    'db' => array(
+        'driver'    => 'PdoMysql',
+        'hostname'  => 'localhost',
+        'database'  => 'rabatem',
+        'username'  => 'root',
+        'password'  => 'vertrigo',
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+    ),
+);

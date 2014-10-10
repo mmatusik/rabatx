@@ -1,0 +1,44 @@
+<script>
+$(function() {
+var availableTags = [
+<?php foreach ($addresses as $addres) : ?>
+"<?php echo $this->escapeHtml($addres->company);?>",
+<?php endforeach; ?>      
+];
+$( "#tags" ).autocomplete({
+source: availableTags
+});
+});
+</script>
+
+				<div class="content-module">
+				
+					<div class="content-module-heading cf">
+					
+						<h3 class="fl"><?php echo $this->translate('Dodaj ofertę') ?></h3>
+						<span class="fr expand-collapse-text"><?php echo $this->translate('Schowaj') ?></span>
+						<span class="fr expand-collapse-text initial-expand"><?php echo $this->translate('Wysuń') ?></span>
+					
+					</div> <!-- end content-module-heading -->
+					
+					
+					<div class="content-module-main">
+                                            <h2 class="title">Krok 4/4</h2>
+                                            <h3>Wybierz Miasta</h3>
+                                            
+                                            <?php
+                                                $form = $this->form;
+                                                $form->prepare();
+                                                echo $this->form()->openTag($form);
+                                                echo $this->formCollection($form);
+                                                //echo $this->formInput($form->get('submit'));
+                                                echo $this->form()->closeTag();
+                                            ?>
+					
+					</div> <!-- end content-module-main -->
+				
+				</div> <!-- end content-module -->
+				
+			
+
+			

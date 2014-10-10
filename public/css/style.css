@@ -1,0 +1,516 @@
+body { margin: 0; padding: 0; font-family: Rajdhani; }
+
+/* OGÓLNE */
+.fr { float: right; }
+.fl { float: left; }
+.width { width: 90%; margin: 0px auto; display: table; }
+h3 { color: #00ccc8; }
+h2 { font-size: 41pt; }
+.center { margin: 0px auto; display: table; }
+.orange { color: #ff9b00; }
+.cyan { color: #00ccc8; }
+
+/* SZEROKOSCI */
+.w100 { width: 100px; }
+.w500 { width: 500px; }
+#up { background: #3f4349; width: 100%; height: 30px; padding: 23px 0px 18px 0px; }
+li.user {  background: url(../img/icons/user.png); }
+li.user-plus {  background: url(../img/icons/user_plus.png); }
+li.mail {  background: url(../img/icons/mail.png); }
+#up li.user, li.user-plus, li.mail { 
+    background-repeat: no-repeat; 
+    background-position: 0px 2px;
+    padding-left: 20px; 
+    float: left; 
+    list-style: none; 
+    margin-left: 20px;  
+    
+}
+#up li.up { 
+    float: left; 
+    list-style: none; 
+    margin-right: 10px; 
+    margin-top: 5px;
+}
+
+#up ul { margin-top: 0px; }
+#up a { text-decoration: none; color: #dbdbdb; }
+#up a:hover { color: #fff; }
+
+/* MENU GÓRA */
+#logo { margin-top: 20px; }
+#head-menu { 
+    background: #fff; 
+    width: 100%; 
+    height: 150px;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 5px 8px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 5px 8px 0px rgba(50, 50, 50, 0.75);
+    z-index: 999;
+    position: relative;
+}
+#menu {
+    margin-top: 63px;
+}
+#menu li { 
+    list-style: none; 
+    text-transform: uppercase; 
+    float: left; 
+    margin-left: 20px; 
+    font-size: 16pt;
+}
+
+#menu a { text-decoration: none; color: #3f4349; float: left;  }
+#menu a:hover { color: #ff9b00; display: block; display: block; padding-bottom: 56px; border-bottom: 4px solid #ff9b00;}
+
+/* MIASTA - SLIDER */
+#head-city {
+    background: url(../img/city-bg.png) no-repeat #dbdbdb center center;
+    width: 100%;
+    height: 837px;
+    z-index: 0;
+}
+
+#city {
+    width: 80%;
+    display: table;
+    margin: 0px auto;
+}
+.header-city {
+    font-size: 25pt; 
+    margin: 70px 0px 50px 14%;
+}
+@media screen and (max-width: 2000px) {
+    #city li {
+        float: left;
+        margin: 3%;
+        width: 25.5%;
+        background: #00ccc8;
+        padding: 15px 4px 15px 4px;
+        list-style: none;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 20pt;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #city li {
+        
+        margin: 3%;
+        width: 90%;
+        background: #00ccc8;
+        padding: 15px 4px 15px 4px;
+        list-style: none;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 20pt;
+    }
+}
+#city a { text-align: center; text-decoration: none; color: #fff; }
+
+/* JAK */
+#how {
+    background: #e5e5e5;
+    width: 100%;
+    height: 320px;
+    padding-top: 80px;
+    -webkit-box-shadow: inset 0px -2px 11px 0px rgba(50, 50, 50, 0.47);
+    -moz-box-shadow:    inset 0px -2px 11px 0px rgba(50, 50, 50, 0.47);
+    box-shadow:         inset 0px -2px 11px 0px rgba(50, 50, 50, 0.47);
+}
+.kolo-1 { background: #00ccc8; }
+.kolo-2 { background: #00cc90; margin-left: 90px; }
+.kolo-3 { background: #efad4d; margin-left: 90px; }
+
+.kolo-1, .kolo-2, .kolo-3 {
+    color: #fff;
+    height: 250px;
+    width: 250px;
+    border-radius: 130px;
+    text-align: center;
+    float: left;
+}
+.kolo-text {
+    padding-top: 70px;
+    font-size: 34pt;
+}
+
+/* SUBSKRYPCJA */
+#sub {
+    background: #3f4349 url(../img/sub.png) no-repeat 22% 50%;
+    width: 100%;
+    height: 430px;
+}
+
+#sub-text {
+    float: right;
+    width: 420px;
+    text-align: center;
+    margin-right: 13%;
+}
+
+#sub-text-nd {
+    margin-top: -20px;
+    color: #cecece;
+    font-size: 24pt;
+    font-weight: 300;
+}
+
+#sub-input {
+    background: #898f98;
+    color: #fff;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+}
+
+#sub-input-submit {
+    background: #ff9b00;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    width: 90px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+
+/* ZAUFALI NAM */
+
+#flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
+display:none;
+}
+
+.nbs-flexisel-container {
+    position:relative;
+    width:90%;
+    margin: 0px auto;
+}
+.nbs-flexisel-ul {
+    position:relative;
+    width:9999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;   
+    text-align:center;  
+}
+
+.nbs-flexisel-inner {
+    overflow:hidden;
+    float:left;
+    width:100%;
+    height: 200px;
+}
+
+
+.nbs-flexisel-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    cursor:pointer;
+    position:relative;
+    line-height:0px;
+}
+.nbs-flexisel-item img {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 170px;
+    width: 200px;
+}
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+    width: 22px;
+    height: 22px; 
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.nbs-flexisel-nav-left {
+    left: 10px;
+    background: url(../img/button-previous.png) no-repeat;
+}
+
+.nbs-flexisel-nav-right {
+    right: 5px;
+    background: url(../img/button-next.png) no-repeat;
+}
+
+h3.zaufali-head {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-style: italic;
+    font-size: 30pt;
+    color: #3f4349;
+    font-weight: 300;
+}
+#zaufali {
+    height:450px;
+    clear:both;
+}
+
+/* STOPKA */
+
+#footer {
+    width: 100%;
+    height: 250px;
+    background: #585b61;
+    z-index: 999;
+    position: relative;
+}
+
+.menu-footer {
+    width: 300px;
+    float: left;
+    font-size: 14pt; color: #bebebe;
+}
+
+.bor { border-left: 1px solid #494d53 }
+.menu-footer li{ list-style: none; }
+.menu-footer a { font-size: 14pt; color: #bebebe; text-decoration: none; }
+.menu-footer a:hover { color: #fff; text-decoration: none; }
+.menu-footer h3 { font-size: 18pt; }
+#footernd {
+    background: #3f4349;
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+}
+
+#footer, #footernd { color: #bebebe; }
+
+
+/* RECOMMENDED */
+#recommended { background: #dbdbdb;  width: 100%; }
+.recommended li{
+    padding-top: 30px;
+    height: 370px;
+}
+
+.recommended li.st{
+    background: url(../img/slider/1.png) center center no-repeat #dbdbdb;
+}
+.recommended li.nd{
+    background: url(../img/slider/2.png) center center no-repeat #dbdbdb;
+}
+.wrapper { 
+    width: 80%; 
+    margin: 0px auto;
+}
+
+.wrapper-text {
+    color: #fff;
+    margin-top: -20px;
+    font-size: 140%;
+    height: 100%;
+}
+
+.wrapper-left {
+    margin-top: -10px;
+    float: left;
+    width: 60%;
+}
+
+.wrapper-left h2{
+    font-size: 240%;
+    margin-bottom: 8%;
+}
+
+.wrapper-right {
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+
+.price { margin: 0px auto; display: table; padding-top: 20%;}
+.wrapper-right h3 { padding-top: 30px; padding-right: 10px; color: #fff; text-decoration: line-through;}
+.wrapper-right h3, .wrapper-right h2 { margin: 0px; float: left; }
+.wrapper-link { margin: 14px auto; text-decoration: none; display: block; border: 1px solid #fff; border-radius: 4px; padding: 10px; width: 35%; }
+.wrapper a { color: #fff; font-size: 17pt; }
+
+
+/* GRID */
+#city-grid {
+    width: 87%;
+    padding: 10px;
+    background: #0088cc;
+    height: 20px;
+    color: #fff;
+    margin: 30px auto;
+}
+#city-grid a { color: #fff; }
+#normal {
+    float: left;
+    width: 48%;
+    margin: 1%;
+}
+#recommendedoffer {
+    float: left;
+    width: 48%;
+    margin: 1%;
+}
+
+.normal {
+    height: 100%;
+    width: 100%;
+    background: #0088cc;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.normal-img {
+    position: relative;
+    width: 100%;
+}
+
+.normal-details {
+    float: left;
+}
+
+.normal-space { width: 100%; height: 1px; float: left; background: #fff; position: relative; }
+
+.normal-price { 
+    position: relative;
+    top: 0;
+    margin-top: -148px;
+    z-index: 999;
+    color: #fff;
+    float: right;
+    padding: 7px 10px 10px 10px;
+    font-size: 130%;
+    text-align: center;
+    background: #000;
+    height: 55px;
+    background:url(../img/bg-black.png);
+}
+
+.reco-price h2, .reco-price h3, .normal-price h2, .normal-price h3 { float: left; }
+
+.normal-price h3, .reco-price h3 {
+    color: #ffc162;
+    text-decoration: line-through;
+}
+
+.normal-price h2, .reco-price h2 {
+    margin-top: -3px;
+    margin-left: 3px;
+    color: #ff9b00;
+}
+
+.normal-move {
+    position: relative;
+    top: 0;
+    margin-top: -60px;
+    z-index: 999;
+    color: #fff;
+    float: right;
+    background: #ff9b00;
+    padding: 10px;
+    font-size: 130%;
+    text-align: center;
+}
+
+.normal img, .reco img {
+    width: 100%;
+}
+
+.reco img { height: 40%; }
+
+.offer-title-normal {
+    color: #fff;
+    font-size: 18pt;
+    padding: 10px 5px 10px 5px;
+}
+
+.offer-title-reco {
+    color: #fff;
+    font-size: 24pt;
+    padding: 10px 10px 13px 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.reco {
+    background: #0088cc;
+    height: 620px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.reco p {
+    color: #fff;
+    padding: 15px 25px 15px 25px;
+    font-size: 100%;
+    height: 20%;
+}
+
+.reco-button {
+    float: right; 
+    width: 40%;
+    font-size: 20pt;
+    background: #ff9b00;
+    margin-top: 5%;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.reco-button a, .normal-move a, .offer-title-normal a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.reco-price { 
+    position: relative;
+    top: 0;
+    margin-top: -90px;
+    z-index: 999;
+    color: #fff;
+    float: right;
+    padding: 7px 10px 10px 10px;
+    font-size: 130%;
+    text-align: center;
+    background: #000;
+    height: 55px;
+    background:url(../img/bg-black.png);
+}
+
+.reco-down {
+    float: left;
+    margin-top: 5%;
+    text-align: center;
+    width: 30%;
+    font-size: 20pt;
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+}
+
+/* PODGLAD */
+
+.offer-podglad {
+    margin-top: 70px;
+    background: #0088cc;   
+    padding: 10px;
+    display: table;
+}
+
+.offer-podglad h2{
+    color: #fff;
+    padding: 4px; margin: 4px;
+}
+.offer-slider {
+    width: 70%;
+    float: left;
+}
+
+.offer-details {
+    width: 25%;
+    float: left;
+    height: 100%;
+    margin-left: 2%;
+    background: #ff9b00;
+}

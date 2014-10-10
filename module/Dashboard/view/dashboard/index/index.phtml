@@ -1,0 +1,133 @@
+
+                                <div class="content-module">
+				
+					<div class="content-module-heading cf">
+					
+						<h3 class="fl"><?php echo $this->translate('Powiadomienia') ?></h3>
+						<span class="fr expand-collapse-text"><?php echo $this->translate('Schowaj') ?></span>
+						<span class="fr expand-collapse-text initial-expand"><?php echo $this->translate('Wysuń') ?></span>
+					
+					</div> <!-- end content-module-heading -->
+					
+					
+					<div class="content-module-main">
+                                            <div class="content-center">
+                                                
+                                                <div class="message-box st">
+                                                    <div class="st-back">
+                                                       <div class="message-box-content">
+                                                           <h2>3</h2>
+                                                           wiadomości
+                                                       </div>    
+                                                    </div> 
+                                                    <div class="message-box-bottom">
+                                                        <a href="#">Pokaż więcej...</a>
+                                                    </div>   
+                                                </div>
+
+                                                <div class="message-box nd">
+                                                    <div class="nd-back">
+                                                       <div class="message-box-content">
+                                                           <h2>13</h2>
+                                                           logów
+                                                       </div>  
+                                                    </div> 
+                                                    <div class="message-box-bottom">
+                                                        <a href="#">Pokaż więcej...</a>
+                                                    </div> 
+                                                </div>
+
+                                                <div class="message-box rd">
+                                                    <div class="rd-back">
+                                                       <div class="message-box-content">
+                                                           <h2>7</h2>
+                                                           ofert oczekujących
+                                                       </div>  
+                                                    </div> 
+                                                    <div class="message-box-bottom">
+                                                        <a href="#">Pokaż więcej...</a>
+                                                    </div>    
+                                                </div>
+                                                
+                                            </div>
+                                            
+					</div> <!-- end content-module-main -->
+				
+				</div> <!-- end content-module -->
+                                
+                                
+				<div class="content-module">
+				
+					<div class="content-module-heading cf">
+					
+						<h3 class="fl"><?php echo $this->translate('Kończące się oferty') ?></h3>
+						<span class="fr expand-collapse-text"><?php echo $this->translate('Schowaj') ?></span>
+						<span class="fr expand-collapse-text initial-expand"><?php echo $this->translate('Wysuń') ?></span>
+					
+					</div> <!-- end content-module-heading -->
+					
+					
+					<div class="content-module-main">
+					
+						<table class="tablesorter" id="options">
+						
+							<thead>
+						
+								<tr>
+									<th><input type="checkbox" id="table-select-all"></th>
+									<th class="sort"><?php echo $this->translate('Nazwa') ?></th>
+									<th class="sort"><?php echo $this->translate('Pozostało') ?></th>
+									<th class="sort"><?php echo $this->translate('Numer telefonu') ?></th>
+                                                                        <th class="sort"><?php echo $this->translate('E-mail') ?></th>
+									<th><?php echo $this->translate('Akcje') ?></th>
+								</tr>
+							
+							</thead>
+	
+						
+							
+							<tbody>
+                                                            <?php foreach ($offers as $offer) : ?>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><?php echo $this->escapeHtml($offer->name);?></td>
+									<td><?php echo gmdate("Y-m-d H:i:s",$this->escapeHtml($offer->end_time));?></td>
+                                                                        <td><?php echo $this->escapeHtml($offer->tel);?></a></td>
+									<td><a href="#"><?php echo $this->escapeHtml($offer->email);?></a></td>
+									<td>
+										<a href="#" class="table-actions-button ic-table-edit"></a>
+										<a href="#" class="table-actions-button ic-table-delete"></a>
+									</td>
+								</tr>                                                               
+                                                            <?php endforeach; ?>    
+                                                        </tbody>	
+						</table>
+                                            
+					</div> <!-- end content-module-main -->
+				
+				</div> <!-- end content-module -->
+				
+				<div class="content-module">
+				
+					<div class="content-module-heading cf">
+					
+						<h3 class="fl"><?php echo $this->translate('Statystyki') ?></h3>
+						<span class="fr expand-collapse-text"><?php echo $this->translate('Schowaj') ?></span>
+						<span class="fr expand-collapse-text initial-expand"><?php echo $this->translate('Wysuń') ?></span>
+					
+					</div> <!-- end content-module-heading -->
+					
+					
+					<div class="content-module-main cf">
+				
+                                                    <div id="chartDiv" style="width:1205px;height:450px;margin:20px;border:1px solid #A4BED4;"></div>
+						
+                                                    <div class="right"><a href="dashboard.html" class="button round blue image-right ic-right-arrow">Pełne statystyki</a></div>
+                                        </div> <!-- end half-size-column -->
+                                </div>        
+				
+                            </div> <!-- end content-module-main -->
+					
+                </div> <!-- end content-module -->
+	
+				

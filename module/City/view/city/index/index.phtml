@@ -1,0 +1,110 @@
+<div id="recommended">
+    <ul class="recommended">
+        <li class="st">
+            <div class="wrapper">
+                <div class="wrapper-left">
+                    <h2 class="cyan">Pizza 30cm w cenie 40cm</h2>
+                    <p class="wrapper-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.
+                    </p>
+                </div>
+                
+                <div class="wrapper-right">
+                    <div class="price"><h3>35zł</h3><h2 class="cyan">24zł</h2></div>
+                    
+                    <a href="#" class="wrapper-link">sprawdź >></a>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="nd">
+            <div class="wrapper">
+                <div class="wrapper-left">
+                    <h2 class="cyan">Kolacja w Restauracja</h2>
+                    <p class="wrapper-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.
+                    </p>
+                </div>
+                
+                <div class="wrapper-right">
+                    <div class="price"><h3>35zł</h3><h2 class="cyan">24zł</h2></div>
+                    
+                    <a href="#" class="wrapper-link">sprawdź >></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+    
+    <div id="city-grid">
+        <div class="fl">Małopolska -> Nowy Sącz</div><div class="fr"><a href="<?php echo $this->url('select', array('action'=>'zmiana')); ?>">Zmień Miasto</a></div>
+    </div>
+
+<div id="grid">
+    <div class="width">
+        <div id="normal">
+            <?php for ($i = 0; $i <= count($offer_name)-1; $i++) { ?>
+            <div class="normal">
+                <div class="mosaic-block fade">
+			<a href="<?php echo $this->url('podglad', array('link'=>$offer_link[$i])); ?>" class="mosaic-overlay">
+				<div class="details">
+                                    <div class="mosaic-discribe">
+					<h4>Mighty Social Icons</h4>
+					<p>By Build Internet</p>
+                                    </div>    
+				</div>
+			</a>
+			<div class="mosaic-backdrop"><img src="../../../../panel-rabatem/data/upload/m_<?php echo $photo_src[$i]; ?>"/></div>
+		</div>
+                <div class="normal-move"><a href="<?php echo $this->url('podglad', array('link'=>$offer_link[$i])); ?>">przejdź do oferty</a></div>
+                <div class="normal-price">
+                    <h3><?php echo $offer_old_price[$i]; ?>zł</h3><h2><?php echo $offer_new_price[$i]; ?>zł</h2>
+                </div>
+                <div class="normal-details">
+                    
+                    <div class="offer-title-normal"><?php echo '<a href="'.$this->url('podglad', array('link'=>$offer_link[$i])).'">'.$offer_name[$i].'</a>'; ?></div>
+                </div>
+            </div>
+            <div class="normal-space"></div>
+            <?php } ?>
+        </div>
+
+        <div id="recommendedoffer">
+            <?php for ($i = 0; $i <= $this->offer_reco; $i++) { ?>
+            <div class="reco">
+                
+                <div class="offer-title-reco"><?php echo $offer_name[$i]; ?></div>
+                <img src="../../../../panel-rabatem/data/upload/m_<?php echo $photo_src[$i]; ?>"/>
+                <div class="reco-price">
+                    <h3><?php echo $offer_old_price[$i]; ?>zł</h3><h2><?php echo $offer_new_price[$i]; ?>zł</h2>
+                </div>
+                <p>
+                        Obiekt wita gości pięknymi widokami na jezioro Czos. Oferuje możliwość doskonałego wypoczynku. Usytuowany w romantycznym ogrodzie, dysponuje 60 doskonale wyposażonymi pokojami gościnnymi. Z balkonu każdego z nich można podziwiać wspaniały widok na okolicę. Na terenie ogrodu znajduje się piękny staw, nad którym można spacerować lub grillować. Jest też możliwość zagrania w bilard czy porzucania do tarczy rzutkami z nowo poznanymi znajomymi.</p>
+                    <div class="reco-down">Pobrano: <strong>83</strong></div>
+                    <div class="reco-button">
+                        <a href="<?php echo $this->url('podglad', array('link'=>$offer_link[$i])); ?>">przejdź do oferty</a>
+                    </div>    
+                        
+            </div>
+            <?php } ?>
+        </div> 
+    </div>     
+</div>
+
+<script>
+    $(document).ready(function(){
+       $('.recommended').bxSlider({
+            auto: true,
+          });
+      });
+</script>

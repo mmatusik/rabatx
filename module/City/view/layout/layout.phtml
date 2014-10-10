@@ -1,0 +1,183 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="pl">
+    <head>
+	<meta charset="utf-8">
+        <?php echo $this->headTitle('Rabatem '. $this->translate(''))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+	<link rel="stylesheet" href="css/style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon(2).ico'))
+                        ->prependStylesheet($this->basePath() . '/css/upload/imgareaselect-animated.css')
+                        ->prependStylesheet($this->basePath() . '/css/jquery.bxslider.css')
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/flexslider.css')
+                        ->prependStylesheet($this->basePath() . '/css/mosaic.css');?>
+        <link href='http://fonts.googleapis.com/css?family=Rajdhani:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/jquery.flexisel.js')
+                ->prependFile($this->basePath() . '/js/mosaic.1.0.1.js')
+                ->prependFile($this->basePath() . '/js/jquery.flexslider.js')
+                ->prependFile($this->basePath() . '/js/jquery.bxslider.js');
+        
+        ?>
+        
+        <script type="text/javascript">  
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    controlNav: "thumbnails"
+                });
+            });
+            jQuery(function($){
+		$('.fade').mosaic();
+            });
+		    
+		</script>
+    </head>
+<body>    
+
+    <div id="up">
+        <div class="width">
+            <ul class="fl">
+                <li class="up"><a href="#"><img src="<?php echo $this->basePath(); ?>/img/icons/fb.png" alt="facebook"/></li>
+                <li class="up"><a href="#"><img src="<?php echo $this->basePath(); ?>/img/icons/yt.png" alt="youtube"/></li>        
+            </ul>
+            <ul class="fr mt0">
+                <li class="user"><a href="#">Zaloguj się</a></li>
+                <li class="user-plus"><a href="#">Zarejestruj się</a></li>
+                <li class="mail"><a href="#">Kontakt</a></li>            
+            </ul>
+        </div>
+    </div>
+    
+    <div id="head-menu">
+        <div class="width">
+            <img id="logo" src="<?php echo $this->basePath(); ?>/img/logo.png" alt="rabatem logo"/>
+            
+            <ul id="menu" class="fr">
+                <li><a href="<?php echo $this->basePath(); ?>">Strona główna</a></li>
+                <li><a href="#">Jak to działa</a></li>
+                <li><a href="#">Regulamin</a></li>    
+                <li><a href="#">Oferta</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+
+<?php 
+    echo $this->content; ?>
+    <!-- /container -->
+<?php echo $this->inlineScript() ?>
+
+<div id="how">
+    <div class="width">
+        <div class="center">
+            <div class="kolo-1">
+                <div class="kolo-text">wybierz</br>ofertę</div>
+            </div>
+            <div class="kolo-2">
+                <div class="kolo-text">pobierz</br>kod</div>
+            </div>
+            <div class="kolo-3">
+                <div class="kolo-text">ciesz się</br>rabatem</div>
+            </div>
+        </div>    
+    </div>    
+</div> 
+
+<div id="sub">
+    <div class="width">    
+        <div id="sub-text">
+            <h2 class="orange">SUBSKRYBCJA!</h2>
+            <p id="sub-text-nd">wpisz się do newslettera</br>
+                bądź powiadamiany o</br>
+                wszystkich nowościach!</p>
+            <input type="text" id="sub-input" value="Wpisz swój e-mail"/></br>
+            <input type="submit" id="sub-input-submit" value="Zapisz się!"/>
+        </div>
+    </div>     
+</div>    
+
+<div id="zaufali">
+    <div class="center"><h3 class="zaufali-head">Zaufali nam...</h3></div>
+        <ul id="zaufali-slider">
+            <li><img src="<?php echo $this->basePath(); ?>/img/logo.png" /></li>         
+            <li><img src="<?php echo $this->basePath(); ?>/img/logo.png" /></li>   
+            <li><img src="<?php echo $this->basePath(); ?>/img/logo.png" /></li>   
+            <li><img src="<?php echo $this->basePath(); ?>/img/logo.png" /></li>   
+        </ul>       
+</div>  
+    
+    
+<div id="footer">
+    <div class="width">
+        <div class="center">
+        <ul class="menu-footer">
+            <h3 class="orange">Menu</h3>
+                <li><a href="<?php echo $this->basePath(); ?>">Strona główna</a></li>
+                <li><a href="#">Jak to działa</a></li>
+                <li><a href="#">Regulamin</a></li>    
+                <li><a href="#">Oferta</a></li>
+                <li><a href="#">Kontakt</a></li>
+        </ul>
+        <ul class="menu-footer bor">
+            <h3 class="orange">Facebook</h3>
+            <div class="fb-like-box" data-href="https://www.facebook.com/rabatnowysacz" data-height="125" data-width="270" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+        </ul>
+        <ul class="menu-footer bor">
+            <h3 class="orange">Kontakt</h3>
+            <li>E-creative</li>
+                <li>33-334 Kamionka</li>
+                <li>ul. Mystków 241</li>    
+                <li>reklama@rabatem.pl</li>
+                <li>www.e-creative.pl</li>
+        </ul>
+            </div>
+    </div>     
+</div>    
+    
+<div id="footernd">
+    <div class="width">Created by E-creative www.e-creative.pl
+    </div>  
+</div>       
+  
+    
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=317549511716607&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>    
+<script type="text/javascript">
+
+$(window).load(function() {
+    $("#zaufali-slider").flexisel({
+        visibleItems: 5,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:480,
+                visibleItems: 1
+            }, 
+            landscape: { 
+                changePoint:640,
+                visibleItems: 2
+            },
+            tablet: { 
+                changePoint:768,
+                visibleItems: 3
+            }
+        }
+    });   
+});
+</script>          
+
+	
+

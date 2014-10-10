@@ -1,0 +1,11 @@
+<div id="head-city">
+    <div class="width">
+        <h3 class="header-city">Wybierz swoje miasto</h3>
+    <ul id="city">
+        <?php foreach ($citys as $city) : ?>
+        <li><a href="<?php echo $this->url('select', array('action'=>'set', 'link'=>$city->link)); ?>"><?php echo $city->name; ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+    </div>    
+</div>
+

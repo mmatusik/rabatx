@@ -1,0 +1,53 @@
+                              			
+				<div class="content-module">
+				
+					<div class="content-module-heading cf">
+					
+						<h3 class="fl"><?php echo $this->translate('Lista ofert') ?></h3>
+						<span class="fr expand-collapse-text"><?php echo $this->translate('Schowaj') ?></span>
+						<span class="fr expand-collapse-text initial-expand"><?php echo $this->translate('Wysuń') ?></span>
+					
+					</div> <!-- end content-module-heading -->
+					
+					
+					<div class="content-module-main">
+					
+						<table class="tablesorter">
+						
+							<thead>
+						
+								<tr>
+									<th><input type="checkbox" id="table-select-all"></th>
+									<th class="sort"><?php echo $this->translate('Nazwa') ?></th>
+									<th class="sort"><?php echo $this->translate('Pozostało') ?></th>
+									<th class="sort"><?php echo $this->translate('Numer telefonu') ?></th>
+                                                                        <th class="sort"><?php echo $this->translate('E-mail') ?></th>
+									<th><?php echo $this->translate('Akcje') ?></th>
+								</tr>
+							
+							</thead>
+							
+							<tbody>
+                                                            <?php foreach ($offers as $offer) : ?>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><?php echo $this->escapeHtml($offer->name);?></td>
+									<td><?php echo gmdate("Y-m-d H:i:s",$this->escapeHtml($offer->end_time));?></td>
+                                                                        <td><?php echo $this->escapeHtml($offer->tel);?></a></td>
+									<td><a href="#"><?php echo $this->escapeHtml($offer->email);?></a></td>
+									<td>
+										<a href="#" class="table-actions-button ic-table-edit"></a>
+										<a href="#" class="table-actions-button ic-table-delete"></a>
+									</td>
+								</tr>                                                               
+                                                            <?php endforeach; ?>    
+                                                        </tbody>	
+						</table>
+					
+					</div> <!-- end content-module-main -->
+				
+				</div> <!-- end content-module -->
+				
+			
+
+			
